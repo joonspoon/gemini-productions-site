@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gemini Productions</title>
+<meta name="description" content="Cultural projects by King Davinci and June Clarke.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #0d0c0b;
+    --bg-raised: #121110;
+    --ink: #f3efe7;
+    --muted: #948c7d;
+    --gold: #b08d4e;
+    --gold-dim: #6e5936;
+    --rule: #262420;
+    --maxw: 780px;
+  }
+
+  *{ box-sizing: border-box; margin: 0; padding: 0; }
+
+  html{ scroll-behavior: smooth; }
+
+  body{
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a{ color: inherit; text-decoration: none; }
+
+  .wrap{
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  /* ---------- Header ---------- */
+  header{
+    padding: 36px 0 0;
+  }
+  .brandbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .brandbar .word{
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 0.28em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+  .brandbar nav a{
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    transition: color .25s ease;
+  }
+  .brandbar nav a:hover{ color: var(--gold); }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    padding: 96px 0 84px;
+    text-align: center;
+  }
+  .hero img{
+    width: 128px;
+    height: 128px;
+    margin: 0 auto 34px;
+    display: block;
+  }
+  .hero h1{
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: clamp(24px, 3.4vw, 32px);
+    color: var(--ink);
+    max-width: 520px;
+    margin: 0 auto;
+    line-height: 1.4;
+  }
+  .hero h1 .by{
+    display: block;
+    font-style: normal;
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 18px;
+  }
+
+  .spark{
+    width: 7px;
+    height: 7px;
+    margin: 44px auto 0;
+    background: var(--gold);
+    transform: rotate(45deg);
+    position: relative;
+  }
+  .spark::before, .spark::after{
+    content: "";
+    position: absolute;
+    background: var(--gold-dim);
+  }
+  .spark::before{
+    width: 1px;
+    height: 34px;
+    left: 3px;
+    top: -38px;
+  }
+  .spark::after{
+    width: 1px;
+    height: 34px;
+    left: 3px;
+    top: 44px;
+  }
+
+  /* ---------- Projects ---------- */
+  .projects{
+    padding: 96px 0 100px;
+  }
+  .eyebrow{
+    font-size: 12px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .projects > .lead{
+    text-align: center;
+    color: var(--muted);
+    font-size: 15px;
+    max-width: 460px;
+    margin: 0 auto 64px;
+  }
+
+  .project{
+    border-top: 1px solid var(--rule);
+    padding: 34px 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 6px;
+    transition: padding-left .3s ease;
+  }
+  .project:last-child{ border-bottom: 1px solid var(--rule); }
+
+  .project:hover{ padding-left: 10px; }
+
+  .project .row{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .project h3{
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 22px;
+    color: var(--ink);
+  }
+  .project .tag{
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    white-space: nowrap;
+  }
+  .project p{
+    color: var(--muted);
+    font-size: 14.5px;
+    max-width: 560px;
+  }
+
+  /* ---------- Footer ---------- */
+  footer{
+    border-top: 1px solid var(--rule);
+    padding: 40px 0 56px;
+    text-align: center;
+  }
+  footer .word{
+    font-family: 'Fraunces', serif;
+    font-size: 13px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 14px;
+  }
+  footer p{
+    font-size: 12.5px;
+    color: var(--gold-dim);
+    letter-spacing: 0.04em;
+  }
+  footer p + p{ margin-top: 6px; }
+  footer a:hover{ color: var(--gold); }
+
+  @media (max-width: 520px){
+    .project .row{ flex-direction: column; gap: 4px; }
+    .hero{ padding: 72px 0 60px; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ transition: none !important; scroll-behavior: auto !important; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap brandbar">
+    <span class="word">Gemini Productions</span>
+    <nav><a href="#projects">Projects</a></nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <img src="assets/logo.png" alt="Gemini Productions">
+    <h1>
+      <span class="by">Cultural Projects</span>
+      Cultural projects by King&nbsp;Davinci and June&nbsp;Clarke.
+    </h1>
+    <div class="spark"></div>
+  </div>
+</section>
+
+<section class="projects" id="projects">
+  <div class="wrap">
+    <div class="eyebrow">Selected Work</div>
+    <p class="lead">Performance, film, and dance education rooted in African culture, staged between Lagos and Europe.</p>
+
+    <div class="project">
+      <div class="row">
+        <h3>Like Water</h3>
+        <span class="tag">Staged Duet</span>
+      </div>
+      <p>A duet between King Davinci and an Irish dancer exploring cultural exchange through movement.</p>
+    </div>
+
+    <div class="project">
+      <div class="row">
+        <h3>Naija Fusion</h3>
+        <span class="tag">Dance Education</span>
+      </div>
+      <p>Afro-fusion dance classes led by King Davinci, held online and in-person across Berlin.</p>
+    </div>
+
+    <div class="project">
+      <div class="row">
+        <h3>Divided</h3>
+        <span class="tag">Performance &amp; Film</span>
+      </div>
+      <p>A grant-funded dance performance and film, created in collaboration with Blayke and Vova.</p>
+    </div>
+
+    <div class="project">
+      <div class="row">
+        <h3>Naija Street Style</h3>
+        <span class="tag">Live Event — Barcelona</span>
+      </div>
+      <p>King Davinci and Azonto share the stage, representing Nigerian and Ghanaian street styles.</p>
+    </div>
+
+    <div class="project">
+      <div class="row">
+        <h3>Eko Freaq</h3>
+        <span class="tag">Nightlife — Berlin</span>
+      </div>
+      <p>A Lagos-themed night at YAAM Berlin, built around Afrobeats and Amapiano.</p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="word">Gemini Productions</div>
+    <p>Berlin, Germany &nbsp;•&nbsp; Lagos, Nigeria</p>
+    <p><a href="mailto:info@geminiproductions.ng">info@geminiproductions.ng</a> &nbsp;•&nbsp; geminiproductions.ng</p>
+    <p>RC 9703727</p>
+  </div>
+</footer>
+
+</body>
+</html>
